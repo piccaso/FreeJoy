@@ -57,7 +57,7 @@ int main(void)
 	
 	HAL_GetUID(uid);
 	uid[0] = uid[0] ^ uid[1] ^ uid[2]; 
-	sprintf(USBD_SERIALNUMBER_STRING_FS, "%012X", uid[0]); 
+	sprintf(USBD_SERIALNUMBER_STRING_FS, "%012lX", uid[0]); 
 	
 	MX_USB_DEVICE_Init();
 
